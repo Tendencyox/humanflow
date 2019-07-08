@@ -31,7 +31,6 @@
         </el-submenu>
         </el-menu>
     </el-aside>
-  
   <el-container>
     <el-header style="text-align: right; font-size: 150%">
       <el-dropdown>
@@ -44,7 +43,6 @@
       </el-dropdown>
       <span>admin</span>
     </el-header>
-    
     <el-main>
       <el-table :data="tableData">
         <el-table-column prop="date" label="日期" width="200%">
@@ -77,7 +75,6 @@
     color: #333;
     line-height: 60px;
   }
-  
   .el-aside {
     color: #333;
   }
@@ -114,7 +111,8 @@
           }]
       }
     },
-    method: {
+    // stupid syntax error
+    methods: {
       toPage2(done) {
         console.log('to page 2')
         this.$router.push({path:'page2'})
